@@ -1,6 +1,5 @@
 package xyz.lotho.me.utils;
 
-import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.config.ServerInfo;
 import xyz.lotho.me.RandomHub;
 

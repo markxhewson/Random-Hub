@@ -15,7 +15,7 @@ public class Servers {
     }
 
     public ServerInfo findRandomHub() {
-        ArrayList<String> servers = (ArrayList<String>) this.instance.config.getConfig().getStringList("servers");
+        ArrayList<String> servers = (ArrayList<String>) this.instance.config.getConfig().getStringList("lobbies");
         int index = new Random().nextInt(servers.size());
 
         ServerInfo server = this.instance.getProxy().getServerInfo(servers.get(index));

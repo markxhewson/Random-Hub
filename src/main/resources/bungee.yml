@@ -1,0 +1,4 @@
+name: RandomHub
+version: '${project.version}'
+main: xyz.lotho.me.RandomHub
+description: A random hub plugin for Bungeecord.

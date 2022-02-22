@@ -2,4 +2,12 @@
 A random hub plugin for Bungeecord Servers.
 
 
-<script src="https://gist.github.com/markxhewson/8081135a7e7afb9e5c3365d0e86bc85d.js"></script>
+```
+servers:
+  - hub-1
+  - hub-2
+
+messages:
+  connected: "&5&l<!> &dYou were connected to &f{server}&d."
+  already-connected: "&5&l<!> &dYou seem to already be connected to this lobby."
+```

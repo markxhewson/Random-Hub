@@ -26,7 +26,12 @@ public class HubCommand extends Command {
         ProxiedPlayer player = (ProxiedPlayer) sender;
         ServerInfo server = this.instance.network.findRandomHub();
 
+        if (player.getServer().getInfo().getName().equals(server.getName())) {
+            player.sendMessage(new TextComponent(Chat.colorize(this.instance.config.getConfig().getString("messages.already-connected"))));
+            return;
+        }
+
         player.connect(server, ServerConnectEvent.Reason.COMMAND);
-        player.sendMessage(new TextComponent(Chat.colorize("&5&l<!> &dYou were connected to &f" + server.getName() + "&d.")));
+        player.sendMessage(new TextComponent(Chat.colorize(this.instance.config.getConfig().getString("messages.connected").replace("{server}", server.getName()))));
     }
 }

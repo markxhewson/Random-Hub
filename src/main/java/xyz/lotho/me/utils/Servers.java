@@ -6,11 +6,11 @@ import xyz.lotho.me.RandomHub;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Network {
+public class Servers {
 
     RandomHub instance;
 
-    public Network(RandomHub instance) {
+    public Servers(RandomHub instance) {
         this.instance = instance;
     }
 

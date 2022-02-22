@@ -2,6 +2,7 @@ package xyz.lotho.me.listeners;
 
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.config.ServerInfo;
+import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.event.ServerConnectEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
@@ -18,9 +19,11 @@ public class ConnectHub implements Listener {
 
     @EventHandler
     public void onConnect(ServerConnectEvent event) {
+        ProxiedPlayer player = event.getPlayer();
+
         ServerInfo server = this.instance.network.findRandomHub();
 
         event.setTarget(server);
-        event.getPlayer().sendMessage(new TextComponent(Chat.colorize(this.instance.config.getConfig().getString("messages.connected").replace("{server}", server.getName()))));
+        player.sendMessage(new TextComponent(Chat.colorize(this.instance.config.getConfig().getString("messages.connected").replace("{server}", server.getName()))));
     }
 }

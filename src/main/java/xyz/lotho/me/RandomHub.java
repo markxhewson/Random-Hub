@@ -5,11 +5,11 @@ import net.md_5.bungee.api.plugin.Plugin;
 import xyz.lotho.me.commands.HubCommand;
 import xyz.lotho.me.config.Config;
 import xyz.lotho.me.listeners.ConnectHub;
-import xyz.lotho.me.utils.Network;
+import xyz.lotho.me.utils.Servers;
 
 public final class RandomHub extends Plugin implements Listener {
 
-    public Network network = new Network(this);
+    public Servers network = new Servers(this);
     public Config config;
 
     @Override

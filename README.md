@@ -7,6 +7,7 @@ From there, you can then modify the configuration file to how you want it, inclu
 
 Once you have finished configuring, you will need to restart the Bungeecord proxy for changes to take effect.
 
+## Config.yml
 ```yml
 lobbies:
   - hub-1

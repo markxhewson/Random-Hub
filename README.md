@@ -3,7 +3,7 @@ A random hub plugin for Bungeecord Servers.
 
 The functionality is quite simple, just load the plugin into your plugins file in Bungeecord, and modify the configuration file to how you want it, including all your lobby servers, as well as the messages that you would like to be displayed.
 
-```json
+```yml
 servers:
   - hub-1
   - hub-2

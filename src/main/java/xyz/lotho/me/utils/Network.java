@@ -24,7 +24,7 @@ public class Network {
             throw new Error("One or more servers in your configuration file is restricted and cannot be accessed.");
         }
 
-        if (!this.instance.getProxy().getServersCopy().containsKey(server.getName())) {
+        if (!instance.getProxy().getServersCopy().containsKey(server.getName())) {
             throw new Error("One or more servers in your configuration file does not exist in the bungeecord server list.");
         }
 

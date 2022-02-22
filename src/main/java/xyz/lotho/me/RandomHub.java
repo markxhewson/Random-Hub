@@ -4,7 +4,7 @@ import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.api.plugin.Plugin;
 import xyz.lotho.me.commands.HubCommand;
 import xyz.lotho.me.config.Config;
-import xyz.lotho.me.listeners.LoadRandomHub;
+import xyz.lotho.me.listeners.ConnectHub;
 import xyz.lotho.me.utils.Network;
 
 public final class RandomHub extends Plugin implements Listener {
@@ -28,7 +28,7 @@ public final class RandomHub extends Plugin implements Listener {
     }
 
     public void loadListeners() {
-        this.getProxy().getPluginManager().registerListener(this, new LoadRandomHub(this));
+        this.getProxy().getPluginManager().registerListener(this, new ConnectHub(this));
     }
 
     public void loadCommands() {

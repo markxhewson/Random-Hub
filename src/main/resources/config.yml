@@ -1,3 +1,6 @@
 servers:
   - hub-1
   - hub-2
+
+messages:
+  connected: "&5&l<!> &dYou were connected to &f{server}&d."

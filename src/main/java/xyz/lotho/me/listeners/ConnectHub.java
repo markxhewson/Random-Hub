@@ -8,11 +8,11 @@ import net.md_5.bungee.event.EventHandler;
 import xyz.lotho.me.RandomHub;
 import xyz.lotho.me.utils.Chat;
 
-public class LoadRandomHub implements Listener {
+public class ConnectHub implements Listener {
 
     RandomHub instance;
 
-    public LoadRandomHub(RandomHub instance) {
+    public ConnectHub(RandomHub instance) {
         this.instance = instance;
     }
 
@@ -21,6 +21,6 @@ public class LoadRandomHub implements Listener {
         ServerInfo server = this.instance.network.findRandomHub();
 
         event.setTarget(server);
-        event.getPlayer().sendMessage(new TextComponent(Chat.colorize("&5&l<!> &dYou were connected to &f" + server.getName() + "&d.")));
+        event.getPlayer().sendMessage(new TextComponent(Chat.colorize(this.instance.config.getConfig().getString("messages.connected").replace("{server}", server.getName()))));
     }
 }

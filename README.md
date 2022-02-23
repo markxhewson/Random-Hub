@@ -14,6 +14,7 @@ lobbies:
   - hub-2
 
 messages:
+  enabled: true
   connected: "&5&l<!> &dYou were connected to &f{server}&d."
   already-connected: "&5&l<!> &dYou seem to already be connected to this lobby."
 ```

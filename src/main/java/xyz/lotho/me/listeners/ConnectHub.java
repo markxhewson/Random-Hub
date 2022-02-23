@@ -19,11 +19,15 @@ public class ConnectHub implements Listener {
 
     @EventHandler
     public void onConnect(ServerConnectEvent event) {
+        if (event.getReason() == ServerConnectEvent.Reason.COMMAND) return;
+
         ProxiedPlayer player = event.getPlayer();
 
         ServerInfo server = this.instance.network.findRandomHub();
-
         event.setTarget(server);
-        player.sendMessage(new TextComponent(Chat.colorize(this.instance.config.getConfig().getString("messages.connected").replace("{server}", server.getName()))));
+
+        if (this.instance.config.getConfig().getBoolean("messages.enabled")) {
+            player.sendMessage(new TextComponent(Chat.colorize(this.instance.config.getConfig().getString("messages.connected").replace("{server}", server.getName()))));
+        }
     }
 }

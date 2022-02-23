@@ -32,6 +32,9 @@ public class HubCommand extends Command {
         }
 
         player.connect(server, ServerConnectEvent.Reason.COMMAND);
-        player.sendMessage(new TextComponent(Chat.colorize(this.instance.config.getConfig().getString("messages.connected").replace("{server}", server.getName()))));
+
+        if (this.instance.config.getConfig().getBoolean("messages.enabled")) {
+            player.sendMessage(new TextComponent(Chat.colorize(this.instance.config.getConfig().getString("messages.connected").replace("{server}", server.getName()))));
+        }
     }
 }

@@ -19,7 +19,7 @@ public class ConnectHub implements Listener {
 
     @EventHandler
     public void onConnect(ServerConnectEvent event) {
-        if (event.getReason() == ServerConnectEvent.Reason.COMMAND) return;
+        if (event.getReason() == ServerConnectEvent.Reason.COMMAND || event.getReason() == ServerConnectEvent.Reason.PLUGIN_MESSAGE) return;
 
         ProxiedPlayer player = event.getPlayer();
 
